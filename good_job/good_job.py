@@ -14,7 +14,8 @@ def numToType(number):
         return "odin"
     elif number == 3:
         return "extracurricular"
-
+    elif number == 0:
+        return "testing"
 
 
 #things to do
