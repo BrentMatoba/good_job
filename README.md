@@ -1,2 +1,6 @@
 # good_job
-makes a little window/jingle using pygame
+Pomodoro counter/log using Python.
+
+Practices CSV manipulation
+Audio file manipulation
+Pygame
