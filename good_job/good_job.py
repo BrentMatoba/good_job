@@ -1,5 +1,8 @@
 import pygame
 import random
+import csv
+from datetime import datetime
+
 pygame.init()
 pygame.mixer.init()
 
@@ -22,7 +25,7 @@ pygame.mixer.init()
 #make desktop shortcut to good_job
 #Wind rustling sound after good_job sound
 
-import csv
+
 start = True
 good_job = pygame.mixer.Sound("ST_Fanfare_WinBattle.wav")
 
@@ -31,20 +34,22 @@ good_job = pygame.mixer.Sound("ST_Fanfare_WinBattle.wav")
 #increase variable by one
 #write variable back to file
 #print #pomodoros completed
-#Date, type, activity
-#separate csv, counters?
 
-with open('log.csv', 'r') as log:
-    csvreader = csv.reader(log)
-    for row in csvreader:
-        print(row)
-    
+with open('log.csv', 'a+') as log:
 
 
 
+    datetime = str(datetime.now())
+    type = input("What type of pomodoro? Odin? School? Extracurricular? Misc? ")
+    description = input("What did you do during the pomodoro? ")
 
-
-#use with keyword for file management, seems like the right choice here
+    description = description.lower()
+    log.write(datetime)
+    log.write(", ")
+    log.write(type)
+    log.write(", ")
+    log.write(description)
+    log.write("\n")
 
 
 
