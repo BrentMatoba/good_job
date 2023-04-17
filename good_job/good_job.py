@@ -22,6 +22,8 @@ pygame.mixer.init()
 #Make pomodoro counter that persists between program runs by writing to file. Pseudo written
 #write main function
 #PyQT module is used to make gui with Python
+#make calculating point types function
+#make numbers for input, 1 = school, 2 = extracurricular etc, shoudl reduce capacity for user input error
 #make desktop shortcut to good_job
 #Wind rustling sound after good_job sound
 
@@ -29,27 +31,20 @@ pygame.mixer.init()
 start = True
 good_job = pygame.mixer.Sound("ST_Fanfare_WinBattle.wav")
 
-#persisting counter pseudo
-#read file, put stored number into variable
-#increase variable by one
-#write variable back to file
-#print #pomodoros completed
 
 with open('log.csv', 'a+') as log:
-
-
-
+    #gathers data for log entry
     datetime = str(datetime.now())
     type = input("What type of pomodoro? Odin? School? Extracurricular? Misc? ")
+    type = type.lower()
     description = input("What did you do during the pomodoro? ")
 
-    description = description.lower()
+    #Adds new line to log.csv
     log.write(datetime)
     log.write(", ")
     log.write(type)
     log.write(", ")
     log.write(description)
-    log.write("\n")
 
 
 
