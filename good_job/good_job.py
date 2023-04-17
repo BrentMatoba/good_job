@@ -17,6 +17,17 @@ def numToType(number):
     elif number == 0:
         return "testing"
 
+def writeLog(datetime, type, description):
+    log.write(datetime)
+    log.write(", ")
+    log.write(type)
+    log.write(", ")
+    log.write(description)
+    log.write("\n")
+    print()
+    print()
+    print()
+    print()
 
 #things to do
 #reduce volume
@@ -38,30 +49,21 @@ def numToType(number):
 #make numbers for input, 1 = school, 2 = extracurricular etc, shoudl reduce capacity for user input error
 #make desktop shortcut to good_job
 #Wind rustling sound after good_job sound
+#Write function that can search csv file and delete testing rows
 
 
-start = True
-good_job = pygame.mixer.Sound("ST_Fanfare_WinBattle.wav")
 
 
+#log management
 with open('log.csv', 'a+') as log:
     #gathers data for log entry
     datetime = str(datetime.now())
-    type = input("What type of pomodoro? (1/2/3?)\n1:School\n2:Odin\n3:Extracurricular\n")
-    type = numToType(int(type))
+    num = input("What type of pomodoro? (1/2/3?)\n1:School\n2:Odin\n3:Extracurricular\n")
+    type = numToType(int(num))
     description = input("What did you do during the pomodoro? ")
 
     #Adds new line to log.csv
-    log.write(datetime)
-    log.write(", ")
-    log.write(type)
-    log.write(", ")
-    log.write(description)
-    log.write("\n")
-    print()
-    print()
-    print()
-    print()
+    writeLog(datetime,type,description)
 
 
 
@@ -69,7 +71,7 @@ with open('log.csv', 'a+') as log:
 
 
 
-
+#Stores quotes
 quotes = ["The pain you feel today is the strength you feel tomorrow. For every challenge encountered there is an opportunity for growth",
           "It's hard to beat a person who never gives up. Our greatest glory is not in never failing, but in rising every time we fail.",
           "With or without you, there will be champions. You want your name there? Work hard. -Khabib Nurmagomedov",
@@ -81,7 +83,7 @@ quotes = ["The pain you feel today is the strength you feel tomorrow. For every 
           "“Opportunity is missed by most people because it is dressed in overalls and looks like work.”"
           ]
 
-
+#Randomly prints inspirational quote
 print(quotes[random.randint(0, len(quotes)-1)])
 print("You did it! Good job!")
 print()
@@ -91,14 +93,11 @@ print()
 print()
 print()
 
-#How to improve sound code
-#https://stackoverflow.com/questions/17657103/how-to-play-wav-file-in-python
 
-while start == True:
-    good_job.play(0, 0, 0)
-    input("")
-    start = False
-
+#plays sound
+good_job = pygame.mixer.Sound("ST_Fanfare_WinBattle.wav")
+good_job.play()
+pygame.time.wait(int(good_job.get_length() * 1000))
 
 
 
