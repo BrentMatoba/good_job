@@ -1,4 +1,5 @@
 Date/Time, Type, Description
 2023-04-17 12:35:35.89465, extracurricular, add csv functionality to good_job
-2023-04-17 12:37:45.577815, Extracurricular, fix formatting issues with csv file
-2023-04-17 12:43:38.046103, Extracurricular, fix more formatting issues, wrote to do list for next session
+2023-04-17 12:37:45.577815, extracurricular, fix formatting issues with csv file
+2023-04-17 12:43:38.046103, extracurricular, fix more formatting issues. Wrote to do list for next session
+2023-04-17 14:36:29.969206, extracurricular, Add number input for type selection

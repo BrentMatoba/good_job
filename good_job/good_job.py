@@ -6,6 +6,17 @@ from datetime import datetime
 pygame.init()
 pygame.mixer.init()
 
+
+def numToType(number):
+    if number == 1:
+        return "school"
+    elif number == 2:
+        return "odin"
+    elif number == 3:
+        return "extracurricular"
+
+
+
 #things to do
 #reduce volume
 #improve sound loop code
@@ -35,8 +46,8 @@ good_job = pygame.mixer.Sound("ST_Fanfare_WinBattle.wav")
 with open('log.csv', 'a+') as log:
     #gathers data for log entry
     datetime = str(datetime.now())
-    type = input("What type of pomodoro? Odin? School? Extracurricular? Misc? ")
-    type = type.lower()
+    type = input("What type of pomodoro? (1/2/3?)\n1:School\n2:Odin\n3:Extracurricular\n")
+    type = numToType(int(type))
     description = input("What did you do during the pomodoro? ")
 
     #Adds new line to log.csv
@@ -45,8 +56,11 @@ with open('log.csv', 'a+') as log:
     log.write(type)
     log.write(", ")
     log.write(description)
-
-
+    log.write("\n")
+    print()
+    print()
+    print()
+    print()
 
 
 
@@ -68,9 +82,13 @@ quotes = ["The pain you feel today is the strength you feel tomorrow. For every 
 
 
 print(quotes[random.randint(0, len(quotes)-1)])
-print("\n")
 print("You did it! Good job!")
-
+print()
+print()
+print()
+print()
+print()
+print()
 
 #How to improve sound code
 #https://stackoverflow.com/questions/17657103/how-to-play-wav-file-in-python
