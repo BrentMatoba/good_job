@@ -13,7 +13,9 @@ def numToType(number):
     elif number == 2:
         return "odin"
     elif number == 3:
-        return "extracurricular"
+        return "extracurricular programming"
+    elif number == 4:
+        return "school programming"
     elif number == 0:
         return "testing"
 
@@ -58,12 +60,12 @@ def writeLog(datetime, type, description):
 with open('log.csv', 'a+') as log:
     #gathers data for log entry
     datetime = str(datetime.now())
-    num = input("What type of pomodoro? (1/2/3?)\n1:School\n2:Odin\n3:Extracurricular\n")
+    num = input("What type of pomodoro? (1/2/3?)\n1:School\n2:Odin\n3:Extracurricular programming\n4:School Programming\n")
     type = numToType(int(num))
     description = input("What did you do during the pomodoro? ")
 
     #Adds new line to log.csv
-    writeLog(datetime,type,description)
+    writeLog(datetime, type, description)
 
 
 
@@ -86,7 +88,6 @@ quotes = ["The pain you feel today is the strength you feel tomorrow. For every 
 #Randomly prints inspirational quote
 print(quotes[random.randint(0, len(quotes)-1)])
 print("You did it! Good job!")
-print()
 print()
 print()
 print()
