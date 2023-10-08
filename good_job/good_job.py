@@ -1,11 +1,27 @@
 import pygame
 import random
-import csv
 from datetime import datetime
+import time
 
 pygame.init()
 pygame.mixer.init()
 
+def countDown():
+    #counter variable is in seconds, currently set to 25 minutes, a standard pomodoro time.
+    counter = 10
+    while counter > 0:
+        minutes, seconds = divmod(counter, 60)
+        if minutes > 0:
+            print(minutes, "minute(s),", seconds, "seconds")
+        else:
+            print(seconds, "seconds")
+        #pauses once per second, technically imprecise because it doesn't account for computing time,
+        #but its sufficient for now as a working protoype, I can change to a more precise counter
+        #Once I have the program running.
+        time.sleep(1)
+        counter -=1
+    print("Pomodoro Complete!")
+    goodJobSound()
 
 def numToType(number):
     if number == 1:
@@ -45,6 +61,9 @@ def printQuote():
     print()
     print()
     print()
+    print()
+    print()
+    print()
 
 #Stores quotes
 quotes = ["The pain you feel today is the strength you feel tomorrow. For every challenge encountered there is an opportunity for growth",
@@ -78,5 +97,5 @@ def logPomodoro():
 
 
 logPomodoro()
-
+#countDown()
 
