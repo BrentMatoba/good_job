@@ -20,6 +20,7 @@ def countDown():
         #Once I have the program running.
         time.sleep(1)
         counter -=1
+    logPomodoro()
     print("Pomodoro Complete!")
     goodJobSound()
 
@@ -36,6 +37,7 @@ def numToType(number):
         return "testing"
 
 def writeLog(log, datetime, type, description):
+    #this needs to be updated
     log.write(datetime)
     log.write(", ")
     log.write(type)
@@ -48,12 +50,14 @@ def writeLog(log, datetime, type, description):
     print()
 
 def goodJobSound():
+    #plays congratulations sound
     good_job = pygame.mixer.Sound("ST_Fanfare_WinBattle.wav")
     good_job.play()
     pygame.time.wait(int(good_job.get_length() * 1000))
 
-#Randomly prints inspirational quote
+
 def printQuote():
+    # Randomly prints inspirational quote
     print(quotes[random.randint(0, len(quotes)-1)])
     print("You did it! Good job!")
     print()
@@ -96,6 +100,18 @@ def logPomodoro():
     goodJobSound()
 
 
-logPomodoro()
-#countDown()
+
+def main():
+    pomoType = int(input("Are you starting or recording a completed pomodoro?\n1:Starting\n2:Recording\n"))
+    if pomoType == 1:
+        countDown()
+    elif pomoType == 2:
+        logPomodoro()
+    else:
+        print("Invalid Response")
+
+if __name__ == '__main__':
+    main()
+
+
 
