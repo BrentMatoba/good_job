@@ -7,7 +7,8 @@ pygame.init()
 pygame.mixer.init()
 
 def countDown():
-    #counter variable is in seconds, currently set to 25 minutes, a standard pomodoro time.
+    #counter variable is in seconds, currently set to 25 minutes/1500 seconds, a standard pomodoro time.
+    #In the future if I allow variable pomodoro times this should have an input variable.
     counter = 10
     while counter > 0:
         minutes, seconds = divmod(counter, 60)
@@ -20,9 +21,7 @@ def countDown():
         #Once I have the program running.
         time.sleep(1)
         counter -=1
-    logPomodoro()
-    print("Pomodoro Complete!")
-    goodJobSound()
+
 
 def numToType(number):
     if number == 1:
@@ -60,14 +59,7 @@ def printQuote():
     # Randomly prints inspirational quote
     print(quotes[random.randint(0, len(quotes)-1)])
     print("You did it! Good job!")
-    print()
-    print()
-    print()
-    print()
-    print()
-    print()
-    print()
-    print()
+
 
 #Stores quotes
 quotes = ["The pain you feel today is the strength you feel tomorrow. For every challenge encountered there is an opportunity for growth",
@@ -94,10 +86,7 @@ def logPomodoro():
         writeLog(log, current_datetime, type, description)
 
 
-    #print inspirational quote
-    printQuote()
-    #plays sound
-    goodJobSound()
+
 
 
 
@@ -105,8 +94,16 @@ def main():
     pomoType = int(input("Are you starting or recording a completed pomodoro?\n1:Starting\n2:Recording\n"))
     if pomoType == 1:
         countDown()
+        goodJobSound()
+        logPomodoro()
+        print("Pomodoro Complete!")
+
     elif pomoType == 2:
         logPomodoro()
+        # print inspirational quote
+        printQuote()
+        # plays sound
+        goodJobSound()
     else:
         print("Invalid Response")
 
