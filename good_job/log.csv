@@ -1,4 +1,4 @@
-Date/Time,Type,Description
+Date,Type,Description
 2023-04-17 12:35:35.89465, extracurricular programming, add csv functionality to good_job
 2023-04-17 12:37:45.577815, extracurricular programming, fix formatting issues with csv file
 2023-04-17 12:43:38.046103, extracurricular programming, fix more formatting issues. Wrote to do list for next session
@@ -164,3 +164,5 @@ Date/Time,Type,Description
 2023-10-08 14:29:15.338155, testing, adfasdf
 2023-10-08 14:55:13.628638, extracurricular programming, Finish timer logging functionality for good_job; research matplotlib
 2023-10-08 15:59:41.447794, extracurricular programming, Resarch matplotlib; pandas; seaborn. Start grapher.py
+2023-10-08 16:54:58.990635, extracurricular programming, Add countplot functionality to grapher
+2023-10-08 19:54:10.245542, extracurricular programming, Research pandas
