@@ -9,7 +9,7 @@ pygame.mixer.init()
 def countDown():
     #counter variable is in seconds, currently set to 25 minutes/1500 seconds, a standard pomodoro time.
     #In the future if I allow variable pomodoro times this should have an input variable.
-    counter = 10
+    counter = 1500
     while counter > 0:
         minutes, seconds = divmod(counter, 60)
         if minutes > 0:
@@ -25,7 +25,7 @@ def countDown():
 
 def numToType(number):
     if number == 1:
-        return "school"
+        return "misc"
     elif number == 2:
         return "odin"
     elif number == 3:
@@ -78,7 +78,7 @@ def logPomodoro():
     with open('log.csv', 'a+') as log:
         #gathers data for log entry
         current_datetime = str(datetime.now())
-        num = input("What type of pomodoro? (1/2/3/4?)\n1:School\n2:Odin\n3:Extracurricular programming\n4:School Programming\n")
+        num = input("What type of pomodoro? (1/2/3/4?)\n1:Misc\n2:Odin\n3:Extracurricular programming\n4:School Programming\n")
         type = numToType(int(num))
         description = input("What did you do during the pomodoro? ")
 
