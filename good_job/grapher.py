@@ -27,4 +27,4 @@ def countPlotLastThirty():
     #want to sort log.csv rows by month
     print(len(log)-1)
 
-countPlotLastThirty()
+countPlot()

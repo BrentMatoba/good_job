@@ -177,3 +177,11 @@ Date,Type,Description
 2023-10-10 19:16:44.183533, odin, Odin exercises
 2023-10-11 16:21:49.668162, school programming, Change medianOfThree to return indexes and not item values
 2023-10-12 22:43:42.395299, odin, Add arithmetic and operate functions to JS calculator
+2023-10-13 09:16:20.305073, odin, Odin calculator html; css
+2023-10-13 09:44:14.313996, odin, Create calculator frame; add buttons; style calculator
+2023-10-13 10:15:23.118119, odin, Style calculator
+2023-10-13 10:54:42.433609, odin, Figure out how to update display
+2023-10-13 11:27:09.150960, odin, add display and button functionality to calculator
+2023-10-13 12:53:30.713437, odin, add operator button functionality to calculator
+2023-10-14 21:56:32.113162, odin, Add clear button functionality to calculator
+2023-10-15 23:17:22.468518, testing, testing; commas

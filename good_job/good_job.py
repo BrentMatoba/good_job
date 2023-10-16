@@ -2,6 +2,7 @@ import pygame
 import random
 from datetime import datetime
 import time
+import re
 
 pygame.init()
 pygame.mixer.init()
@@ -81,6 +82,11 @@ def logPomodoro():
         num = input("What type of pomodoro? (1/2/3/4?)\n1:Misc\n2:Odin\n3:Extracurricular programming\n4:School Programming\n")
         type = numToType(int(num))
         description = input("What did you do during the pomodoro? ")
+
+        #regexpression goes here to remove commas
+        pattern = ","
+        regex = re.compile(pattern)
+        description = regex.sub(";", description)
 
         #Adds new line to log.csv
         writeLog(log, current_datetime, type, description)
