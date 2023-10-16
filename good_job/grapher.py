@@ -26,5 +26,6 @@ def countPlotLastThirty():
     current_datetime = str(datetime.now())
     #want to sort log.csv rows by month
     print(len(log)-1)
+    #try DateOffset, then iterate backwards through csv until csv date is less than 1 month ago. 
 
-countPlot()
+countPlotLastThirty()

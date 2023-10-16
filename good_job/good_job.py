@@ -25,6 +25,7 @@ def countDown():
 
 
 def numToType(number):
+    #converts user input into pomodoro category
     if number == 1:
         return "misc"
     elif number == 2:
@@ -83,7 +84,7 @@ def logPomodoro():
         type = numToType(int(num))
         description = input("What did you do during the pomodoro? ")
 
-        #regexpression goes here to remove commas
+        #regular expression allows commas in notes
         pattern = ","
         regex = re.compile(pattern)
         description = regex.sub(";", description)
