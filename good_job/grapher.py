@@ -11,29 +11,30 @@ log = pd.read_csv('log.csv')
 
 
 
-def countPlot():
+def countPlot(data):
     #Creates countplot of total pomodoros
     #Alters initial size of countplot
     plt.figure(figsize=(10, 8))
     #countplot shows how many times something occurs
-    sns.countplot(x="Type", data=log)
+    sns.countplot(x="Type", data=data)
 
 
     #Makes graph appear
     plt.show()
 
 def countPlotLastThirty():
-    logList = 0
     plt.figure(figsize=(10, 8))
     current_datetime = str(datetime.now())
     #want to sort log.csv rows by month
     print(len(log)-1)
     #try DateOffset, then iterate backwards through csv until csv date is less than 1 month ago.
 
-    last = log.iloc[-1]
-    lastColumn = last.iloc[0]
-    print(lastColumn)
+    print("current: " + current_datetime)
 
+
+    lastThirtyRows = log.tail(30)
+    sns.countplot(x="Type", data=lastThirtyRows)
+    plt.show()
 
 countPlotLastThirty()
-#countPlot()
+#countPlot(log)
