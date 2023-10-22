@@ -4,6 +4,7 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 import pandas as pd
 from datetime import datetime
+import csv
 
 #import data from csv
 log = pd.read_csv('log.csv')
@@ -22,10 +23,17 @@ def countPlot():
     plt.show()
 
 def countPlotLastThirty():
+    logList = 0
     plt.figure(figsize=(10, 8))
     current_datetime = str(datetime.now())
     #want to sort log.csv rows by month
     print(len(log)-1)
-    #try DateOffset, then iterate backwards through csv until csv date is less than 1 month ago. 
+    #try DateOffset, then iterate backwards through csv until csv date is less than 1 month ago.
+
+    last = log.iloc[-1]
+    lastColumn = last.iloc[0]
+    print(lastColumn)
+
 
 countPlotLastThirty()
+#countPlot()

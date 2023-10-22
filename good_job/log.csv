@@ -185,3 +185,21 @@ Date,Type,Description
 2023-10-13 12:53:30.713437, odin, add operator button functionality to calculator
 2023-10-14 21:56:32.113162, odin, Add clear button functionality to calculator
 2023-10-15 23:17:22.468518, testing, testing; commas
+2023-10-16 12:23:11.487465, odin, pseudocode calculator
+2023-10-16 12:59:20.265660, odin, add regex to calculator to parse data
+2023-10-16 13:57:31.485544, odin, Add calculate short and length check functionality to calculator; improve on calculateLong
+2023-10-16 15:11:57.931384, odin, add calculatelong functionality
+2023-10-16 19:27:47.359921, odin, Finished calculator! Starting intermediate html and css
+2023-10-17 15:43:11.010439, odin, learning about emmet and svgs
+2023-10-17 16:52:02.903164, odin, take notes on SVG; XML; Emmet
+2023-10-17 17:40:59.332248, odin, Learn about tables and default styles
+2023-10-18 22:46:19.199739, odin, REad about CSS properties
+2023-10-19 13:55:09.033488, odin, CSS advanced selectors
+2023-10-19 14:59:18.892004, odin, Pseudoclasses; pseudoelements; attribute selectors
+2023-10-19 15:57:01.572512, odin, things
+2023-10-19 19:29:07.872137, odin, CSS positioning
+2023-10-19 21:19:19.046818, odin, CSS functions and custom properties
+2023-10-20 14:57:24.457971, odin, Learn about CSS variables
+2023-10-20 15:42:21.564158, odin, Read about frameworks and preprocessors
+2023-10-20 16:23:07.761999, odin, Learn about forms and form controls
+2023-10-20 22:55:54.794525, odin, Learn input types
