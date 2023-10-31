@@ -5,6 +5,17 @@ root = tk.Tk()
 def myClick():
     myLabel = tk.Label(root, text="Look! I clicked a button!")
     myLabel.pack()
+
+
+def hello():
+    #allows you to get variables as the output
+    hello = "Hello " + e.get()
+    name = tk.Label(root, text=hello)
+    name.pack()
+
+
+
+
 myLabel1 = tk.Label(root, text="Hello World", fg="white")
 myLabel2 = tk.Label(root, text="Hello World", fg="white")
 
@@ -12,7 +23,8 @@ myLabel2 = tk.Label(root, text="Hello World", fg="white")
 myButton = tk.Button(root, text="click me", command=myClick)
 myButton.pack()
 
-
+helloButton = tk.Button(root, text="hello", command=hello)
+helloButton.pack()
 
 
 
