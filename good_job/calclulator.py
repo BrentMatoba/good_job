@@ -21,7 +21,8 @@ button_7 = tk.Button(root, text="7", padx=40,pady=20, command=button_add)
 button_8 = tk.Button(root, text="8", padx=40,pady=20, command=button_add)
 button_9 = tk.Button(root, text="9", padx=40,pady=20, command=button_add)
 button_0 = tk.Button(root, text="0", padx=40,pady=20, command=button_add)
-
+button_add = tk.Button(root, text="+", padx=39, pady=20, command=button_add)
+button_clear = tk.Button(root, text="C", padx =91, pady = 20, command=button_add)
 
 
 #add buttons to screen
