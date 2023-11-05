@@ -1,7 +1,6 @@
 import tkinter as tk
 
 
-
 root = tk.Tk()
 root.title("Pomodoro Tracker")
 root.geometry("500x500")
@@ -23,9 +22,11 @@ startButton = tk.Button(root, text="start pomodoro", command=start)
 trackButton = tk.Button(root, text="track pomodoro", command=track)
 countplotButton = tk.Button(root, text="countplot pomodoros", command=countplot)
 
+e=tk.Entry(root, width=1, borderwidth=5)
+e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
-startButton.pack()
-trackButton.pack()
-countplotButton.pack()
+startButton.grid(row=3, column=0)
+#trackButton.pack()
+#countplotButton.pack()
 
 root.mainloop()
