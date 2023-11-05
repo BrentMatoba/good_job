@@ -26,7 +26,7 @@ e=tk.Entry(root, width=1, borderwidth=5)
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
 startButton.grid(row=3, column=0)
-#trackButton.pack()
-#countplotButton.pack()
+trackButton.grid(row=2, column=0)
+countplotButton.grid(row=2, column=3)
 
 root.mainloop()
