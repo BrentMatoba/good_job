@@ -22,7 +22,7 @@ def countPlot(data):
     #Makes graph appear
     plt.show()
 
-def countPlotLastThirty():
+def histPlotLastThirty():
     plt.figure(figsize=(10, 8))
     current_datetime = str(datetime.now())
     #want to sort log.csv rows by month
@@ -36,5 +36,5 @@ def countPlotLastThirty():
     sns.histplot(x="Type", data=lastThirtyRows)
     plt.show()
 
-countPlotLastThirty()
+histPlotLastThirty()
 countPlot(log)
