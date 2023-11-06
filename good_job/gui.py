@@ -2,7 +2,7 @@ import tkinter as tk
 
 root = tk.Tk()
 root.title("Pomodoro Tracker")
-root.geometry("500x500")
+root.geometry("1200x800")
 
 
 
@@ -26,6 +26,9 @@ trackButton = tk.Button(root, text="track pomodoro", command=track)
 countplotButton = tk.Button(dataButtonFrame, text="countplot pomodoros", command=countplot)
 
 
+#move using the sticky method
+placeholderLabel = tk.Label(root, text="", bg="blue", width=50, height=30)
+placeholderLabel.grid(row=5, column=10)
 
 
 startButton.grid(row=3, column=0)
