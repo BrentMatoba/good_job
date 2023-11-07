@@ -20,6 +20,9 @@ def countplot():
 #lineFinder = tk.Label(root, text ="", bg="red", width=2, height=30);
 #ineFinder.grid(row=0, column=20)
 
+title = tk.Label(root, text="Pomodoro Tracker", fg="white")
+title.grid(row=0, column=12)
+
 dataButtonFrame = tk.Frame(root)
 dataButtonFrame.grid()
 
