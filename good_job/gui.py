@@ -17,9 +17,13 @@ def countplot():
     #grapher functions here
     return
 
+#lineFinder = tk.Label(root, text ="", bg="red", width=2, height=30);
+#ineFinder.grid(row=0, column=20)
 
 dataButtonFrame = tk.Frame(root)
 dataButtonFrame.grid()
+
+
 
 startButton = tk.Button(root, text="start pomodoro", command=start)
 trackButton = tk.Button(root, text="track pomodoro", command=track)
