@@ -28,9 +28,9 @@ dataButtonFrame.grid()
 
 
 
-startButton = tk.Button(root, text="start pomodoro", command=start)
-trackButton = tk.Button(root, text="track pomodoro", command=track)
-countplotButton = tk.Button(dataButtonFrame, text="countplot pomodoros", command=countplot)
+startButton = tk.Button(root, height=5, width=20,text="start pomodoro", command=start)
+trackButton = tk.Button(root, height=5, width=20, text="track pomodoro", command=track)
+countplotButton = tk.Button(dataButtonFrame, height=5, width=20, text="countplot pomodoros", command=countplot)
 
 
 #move using the sticky method
