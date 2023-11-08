@@ -3,7 +3,7 @@ import tkinter as tk
 root = tk.Tk()
 root.title("Pomodoro Tracker")
 root.geometry("1200x800")
-
+root.resizable(False, False)
 
 
 def start():
@@ -34,8 +34,10 @@ countplotButton = tk.Button(dataButtonFrame, height=5, width=20, text="countplot
 
 
 #move using the sticky method
-placeholderLabel = tk.Label(root, text="", bg="blue", width=50, height=30)
-placeholderLabel.grid(row=5, column=10)
+placeholderFrame = tk.Frame(root) #In TKinter, having items in different containers makes it so that they don't physically interact
+placeholderFrame.grid()
+placeholderLabel = tk.Label(placeholderFrame, text="", bg="blue", width=50, height=30)
+placeholderLabel.grid(row=3, column=10)
 
 
 startButton.grid(row=3, column=0)
