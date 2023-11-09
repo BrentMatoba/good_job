@@ -23,25 +23,27 @@ def countplot():
 title = tk.Label(root, text="Pomodoro Tracker", fg="white")
 title.grid(row=0, column=12)
 
-dataButtonFrame = tk.Frame(root)
-dataButtonFrame.grid()
+buttonFrame = tk.Frame(root)
+buttonFrame.grid()
 
 
 
-startButton = tk.Button(root, height=5, width=20,text="start pomodoro", command=start)
-trackButton = tk.Button(root, height=5, width=20, text="track pomodoro", command=track)
-countplotButton = tk.Button(dataButtonFrame, height=5, width=20, text="countplot pomodoros", command=countplot)
+startButton = tk.Button(buttonFrame, height=5, width=20,text="start pomodoro", command=start)
+trackButton = tk.Button(buttonFrame, height=5, width=20, text="track pomodoro", command=track)
+countplotButton = tk.Button(buttonFrame, height=5, width=20, text="countplot pomodoros", command=countplot)
+histplotButton = tk.Button(buttonFrame, height=5, width=20, text="histplot pomodors")
 
 
 #move using the sticky method
 placeholderFrame = tk.Frame(root) #In TKinter, having items in different containers makes it so that they don't physically interact
-placeholderFrame.grid(row=3, column=10, padx=425)
+placeholderFrame.grid(row=3, column=10, padx=300)
 placeholderLabel = tk.Label(placeholderFrame, text="", bg="blue", width=50, height=30)
 placeholderLabel.grid()
 
 
-startButton.grid(row=3, column=0)
+startButton.grid(row=1, column=0)
 trackButton.grid(row=2, column=0)
-countplotButton.grid(row=2, column=3)
+countplotButton.grid(row=3, column=0)
+histplotButton.grid(row=4, column=0)
 
 root.mainloop()
