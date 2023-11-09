@@ -35,9 +35,9 @@ countplotButton = tk.Button(dataButtonFrame, height=5, width=20, text="countplot
 
 #move using the sticky method
 placeholderFrame = tk.Frame(root) #In TKinter, having items in different containers makes it so that they don't physically interact
-placeholderFrame.grid()
+placeholderFrame.grid(row=3, column=10, padx=425)
 placeholderLabel = tk.Label(placeholderFrame, text="", bg="blue", width=50, height=30)
-placeholderLabel.grid(row=3, column=10)
+placeholderLabel.grid()
 
 
 startButton.grid(row=3, column=0)
