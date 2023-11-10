@@ -4,8 +4,7 @@ from datetime import datetime
 import time
 import re
 
-pygame.init()
-pygame.mixer.init()
+
 
 def countDown():
     #counter variable is in seconds, currently set to 25 minutes/1500 seconds, a standard pomodoro time.
@@ -98,6 +97,8 @@ def logPomodoro():
 
 
 def main():
+    pygame.init()
+    pygame.mixer.init()
     pomoType = int(input("Are you starting or recording a completed pomodoro?\n1:Starting\n2:Recording\n"))
     if pomoType == 1:
         countDown()

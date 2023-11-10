@@ -1,4 +1,8 @@
 import tkinter as tk
+import grapher as graphy
+import good_job
+
+
 
 root = tk.Tk()
 root.title("Pomodoro Tracker")
@@ -11,10 +15,15 @@ def start():
     return
 
 def track():
+
     ##import good_job track functions here
     return
 def countplot():
+    graphy.countPlot()
     #grapher functions here
+    return
+def histplot():
+    graphy.histPlotLastThirty()
     return
 
 #lineFinder = tk.Label(root, text ="", bg="red", width=2, height=30);
@@ -31,7 +40,7 @@ buttonFrame.grid()
 startButton = tk.Button(buttonFrame, height=5, width=20,text="start pomodoro", command=start)
 trackButton = tk.Button(buttonFrame, height=5, width=20, text="track pomodoro", command=track)
 countplotButton = tk.Button(buttonFrame, height=5, width=20, text="countplot pomodoros", command=countplot)
-histplotButton = tk.Button(buttonFrame, height=5, width=20, text="histplot pomodors")
+histplotButton = tk.Button(buttonFrame, height=5, width=20, text="histplot pomodoros", command=histplot)
 
 
 #move using the sticky method
