@@ -25,17 +25,10 @@ def countPlot():
 
 def histPlotLastThirty():
     plt.figure(figsize=(10, 8))
-    current_datetime = str(datetime.now())
-    #want to sort log.csv rows by month
-
     #try DateOffset, then iterate backwards through csv until csv date is less than 1 month ago.
-
-    print("current: " + current_datetime)
-
-
     lastThirtyRows = log.tail(30)
     sns.histplot(x="Type", data=lastThirtyRows)
     plt.show()
 if __name__ == '__main__':
     histPlotLastThirty()
-    countPlot(log)
+    countPlot()
