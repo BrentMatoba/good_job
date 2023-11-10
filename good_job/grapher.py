@@ -15,7 +15,13 @@ def countPlot():
     log = pd.read_csv('log.csv')
 
     #Alters initial size of countplot
-    plt.figure(figsize=(10, 8))
+    window = plt.figure(figsize=(10, 8))
+
+    #Changes window title
+    window.canvas.manager.set_window_title("CountPlot")
+
+    #Gives the graph a title
+    plt.title("Total Pomodoros")
     #countplot shows how many times something occurs
     sns.countplot(x="Type", data=log)
     print("Total pomodoros:",  len(log)-1)
@@ -24,8 +30,14 @@ def countPlot():
     plt.show()
 
 def histPlotLastThirty():
-    plt.figure(figsize=(10, 8))
+    window = plt.figure(figsize=(10, 8))
     #try DateOffset, then iterate backwards through csv until csv date is less than 1 month ago.
+
+    #Changes window title
+    window.canvas.manager.set_window_title("Histogram")
+
+    
+
     lastThirtyRows = log.tail(30)
     sns.histplot(x="Type", data=lastThirtyRows)
     plt.show()
