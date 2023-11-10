@@ -22,9 +22,12 @@ def countPlot():
 
     #Gives the graph a title
     plt.title("Total Pomodoros")
+
     #countplot shows how many times something occurs
     sns.countplot(x="Type", data=log)
-    print("Total pomodoros:",  len(log)-1)
+
+    #Displays total pomodoros on graph
+    plt.text(-1, -10, "Total Pomodoros: " + str(len(log)-1))
 
     #Makes graph appear
     plt.show()
@@ -36,11 +39,11 @@ def histPlotLastThirty():
     #Changes window title
     window.canvas.manager.set_window_title("Histogram")
 
-    
+
 
     lastThirtyRows = log.tail(30)
     sns.histplot(x="Type", data=lastThirtyRows)
     plt.show()
 if __name__ == '__main__':
-    histPlotLastThirty()
+    #histPlotLastThirty()
     countPlot()

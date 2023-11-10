@@ -217,3 +217,4 @@ Date,Type,Description
 2023-11-09 20:30:28.323468, testing, sasdf
 2023-11-09 20:30:41.894813, testing, asdkfl;
 2023-11-09 21:10:31.636171, extracurricular programming, add button functionality for histplot and countplots; fix import bug
+2023-11-10 14:31:37.462328, extracurricular programming, Add titles to graphs; add total pomodoros to countPlot figure
