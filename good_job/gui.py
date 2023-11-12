@@ -11,9 +11,7 @@ root.resizable(False, False)
 
 
 def start():
-    ##import good_job here, why doesn't import work??
-    return
-
+    countDownLabel(timerLabel)
 def record():
 
     ##import good_job track functions here
@@ -25,6 +23,13 @@ def countplot():
 def histplot():
     graphy.histPlotLastThirty()
     return
+def countDownLabel(timerLabel, counter=1500):
+    startButton.config(state=tk.DISABLED)
+    if counter > 0:
+        minutes, seconds = divmod(counter, 60)
+        converted = f"{minutes:02d}:{seconds:02d}"
+        timerLabel.config(text=converted)
+        root.after(1000, countDownLabel, timerLabel, counter-1)
 
 
 #lineFinder = tk.Label(root, text ="", bg="red", width=2, height=30);
@@ -35,7 +40,7 @@ title = tk.Label(titleFrame, text="Pomodoro Tracker", fg="white")
 title.grid()
 
 buttonFrame = tk.Frame(root)
-buttonFrame.grid(row=3, column=5, padx=80)
+buttonFrame.place(x=100, y=50)
 
 
 
@@ -48,11 +53,9 @@ countplotButton = tk.Button(buttonFrame, height=5, width=20, text="countplot pom
 histplotButton = tk.Button(buttonFrame, height=5, width=20, text="histplot pomodoros", command=histplot)
 
 
-#move using the sticky method
-placeholderFrame = tk.Frame(root, width=30, height=30) #In TKinter, having items in different containers makes it so that they don't physically interact
-placeholderFrame.grid(row=4, column=4)
-placeholderLabel = tk.Label(root, bg="blue", width=50, height=20)
-placeholderLabel.place(x=600, y=50)
+timerLabel = tk.Label(root, text=("0:00"), font=("Arial", 80), bg="blue", width=10, height=4)
+timerLabel.place(x=600, y=50)
+
 
 
 #startButton.grid(row=1, column=0)
