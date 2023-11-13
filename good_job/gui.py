@@ -1,20 +1,13 @@
 import tkinter as tk
 import grapher as graphy
-import os
 import good_job
-
-
-
-root = tk.Tk()
-root.title("Pomodoro Tracker")
-root.geometry("1200x800")
-root.resizable(False, False)
 
 
 def start():
     countDownLabel(timerLabel)
 
 def record():
+    inputWindow()
     good_job.logPomodoroGui()
 
     ##import good_job track functions here
@@ -36,35 +29,33 @@ def countDownLabel(timerLabel, counter=10):
     elif counter < 0:
         good_job.logPomodoroGui()
 
+def inputWindow():
+    iWindow = tk.Toplevel(root)
+    iWindow.title("Input Window")
+    iWindow.geometry("800x400")
+    iWindow.resizable(False, False)
 
 
-titleFrame = tk.Frame(root)
-title = tk.Label(titleFrame, text="Pomodoro Tracker", fg="white")
-title.grid()
 
+root = tk.Tk()
+root.title("Pomodoro Tracker")
+root.geometry("1200x800")
+root.resizable(False, False)
+
+#Buttons
 buttonFrame = tk.Frame(root)
 buttonFrame.place(x=100, y=50)
 
-
-
-
-
-#buttons
 startButton = tk.Button(buttonFrame, height=5, width=20,text="start pomodoro", command=start)
 trackButton = tk.Button(buttonFrame, height=5, width=20, text="record pomodoro", command=record)
 countplotButton = tk.Button(buttonFrame, height=5, width=20, text="countplot pomodoros", command=countplot)
 histplotButton = tk.Button(buttonFrame, height=5, width=20, text="histplot pomodoros", command=histplot)
 
 
+#Timer Label
 timerLabel = tk.Label(root, text=("0:00"), font=("Arial", 80), bg="blue", width=10, height=4)
 timerLabel.place(x=600, y=50)
 
-
-
-#startButton.grid(row=1, column=0)
-#trackButton.grid(row=2, column=0)
-#countplotButton.grid(row=3, column=0)
-#histplotButton.grid(row=4, column=0)
 
 startButton.pack()
 trackButton.pack()
