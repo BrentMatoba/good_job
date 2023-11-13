@@ -19,7 +19,7 @@ def countplot():
 def histplot():
     graphy.histPlotLastThirty()
     return
-def countDownLabel(timerLabel, counter=10):
+def countDownLabel(timerLabel, counter=10): #counter should be 1500 for 25 min
     startButton.config(state=tk.DISABLED)
     if counter >= 0:
         minutes, seconds = divmod(counter, 60)
