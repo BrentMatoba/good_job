@@ -1,5 +1,6 @@
 import tkinter as tk
 import grapher as graphy
+import os
 import good_job
 
 
@@ -12,7 +13,9 @@ root.resizable(False, False)
 
 def start():
     countDownLabel(timerLabel)
+
 def record():
+    good_job.logPomodoroGui()
 
     ##import good_job track functions here
     return
@@ -23,17 +26,17 @@ def countplot():
 def histplot():
     graphy.histPlotLastThirty()
     return
-def countDownLabel(timerLabel, counter=1500):
+def countDownLabel(timerLabel, counter=10):
     startButton.config(state=tk.DISABLED)
-    if counter > 0:
+    if counter >= 0:
         minutes, seconds = divmod(counter, 60)
         converted = f"{minutes:02d}:{seconds:02d}"
         timerLabel.config(text=converted)
         root.after(1000, countDownLabel, timerLabel, counter-1)
+    elif counter < 0:
+        good_job.logPomodoroGui()
 
 
-#lineFinder = tk.Label(root, text ="", bg="red", width=2, height=30);
-#ineFinder.grid(row=0, column=20)
 
 titleFrame = tk.Frame(root)
 title = tk.Label(titleFrame, text="Pomodoro Tracker", fg="white")

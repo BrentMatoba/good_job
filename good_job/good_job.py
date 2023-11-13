@@ -3,7 +3,6 @@ import random
 from datetime import datetime
 import time
 import re
-import tkinter
 
 
 
@@ -49,10 +48,6 @@ def writeLog(log, datetime, type, description):
     log.write(", ")
     log.write(description)
     log.write("\n")
-    print()
-    print()
-    print()
-    print()
 
 def goodJobSound():
     #plays congratulations sound
@@ -82,6 +77,23 @@ def printQuote():
 
 
 def logPomodoro():
+    #log management
+    with open('log.csv', 'a+') as log:
+        #gathers data for log entry
+        current_datetime = str(datetime.now())
+        num = input("What type of pomodoro? (1/2/3/4?)\n1:Misc\n2:Odin\n3:Extracurricular programming\n4:School Programming\n")
+        type = numToType(int(num))
+        description = input("What did you do during the pomodoro? ")
+
+        #regular expression allows commas in notes
+        pattern = ","
+        regex = re.compile(pattern)
+        description = regex.sub(";", description)
+
+        #Adds new line to log.csv
+        writeLog(log, current_datetime, type, description)
+
+def logPomodoroGui():
     #log management
     with open('log.csv', 'a+') as log:
         #gathers data for log entry
