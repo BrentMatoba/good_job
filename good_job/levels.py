@@ -11,3 +11,8 @@
         #N3: 1980 XP (1100 from N4 + 880 additional)
         #N2: 3080 XP (1980 from N3 + 1100 additional)
         #N1: 4400 XP (3080 from N2 + 1320 additional)
+
+class subject:
+    def __int__(self, name, pomodoros):
+        self.name = name
+        self.pomodoros = 0;
