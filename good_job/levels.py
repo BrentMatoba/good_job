@@ -36,4 +36,4 @@ def scanLog(subject):
 
 
 if __name__ == '__main__':
-    print(scanLog(" odin"))
+    print(scanLog(" odin") + scanLog(" extracurricular programming") + scanLog(" school programming") //2)
