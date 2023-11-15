@@ -12,7 +12,17 @@
         #N2: 3080 XP (1980 from N3 + 1100 additional)
         #N1: 4400 XP (3080 from N2 + 1320 additional)
 
-class subject:
-    def __int__(self, name, pomodoros):
+class Subject:
+    name ="asdf"
+    pomodoros =0;
+    level = 1
+    def __init__(self, name):
         self.name = name
         self.pomodoros = 0;
+        self.level = 1
+
+
+if __name__ == '__main__':
+    test = Subject("boop")
+    print(test.name)
+    print(test.pomodoros)
