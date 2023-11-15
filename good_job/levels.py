@@ -3,8 +3,10 @@
     #logarithmic, meaning fast start and gradually slower gains as you level up
     #where to place badges?
     #100 xp per level? why or why not?
+import csv
 
-    ###Assign an XP value to each Pomodoro session. For simplicity, let's say 1 Pomodoro = 1 XP.
+
+###Assign an XP value to each Pomodoro session. For simplicity, let's say 1 Pomodoro = 1 XP.
         #Cumulative XP required for each JLPT level:
         #N5: 440 XP
         #N4: 1100 XP (440 from N5 + 660 additional)
@@ -13,16 +15,25 @@
         #N1: 4400 XP (3080 from N2 + 1320 additional)
 
 class Subject:
-    name ="asdf"
-    pomodoros =0;
-    level = 1
+    name = None
+    pomodoros =None;
+    level = None
     def __init__(self, name):
         self.name = name
         self.pomodoros = 0;
         self.level = 1
 
 
+def scanLog(subject):
+    counter = 0;
+    with open("log.csv", "r") as log:
+        reader = csv.reader(log)
+        for line in reader:
+            print(line[1])
+            if line[1] == subject:
+                counter+=1
+    return counter
+
+
 if __name__ == '__main__':
-    test = Subject("boop")
-    print(test.name)
-    print(test.pomodoros)
+    print(scanLog(" odin"))
