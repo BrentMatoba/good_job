@@ -27,9 +27,12 @@ def countplot():
 def histplot():
     graphy.histPlotLastThirty()
     return
-
+def returnInfo():
+    #take pomodoro type from dropdown menu, and text from tk.entry, and add to record function
+    pass
 
 def inputWindow():
+    #window boilerplate
     iWindow = tk.Toplevel(root)
     iWindow.title("Input Window")
     iWindow.geometry("800x400")
@@ -42,13 +45,14 @@ def inputWindow():
     type = tk.OptionMenu(iWindow, selectedOption, *options)
     type.pack()
 
-
+    #gets pomodoro description
     descriptionTitle = tk.Label(iWindow, text="What did you do during the pomdoro?")
     descriptionTitle.pack()
     description = tk.Entry(iWindow, width=20)
     description.pack()
 
-    iwindowRecord = tk.Button(iWindow, text="Record")
+    #creates record button
+    iwindowRecord = tk.Button(iWindow, text="Record", command=returnInfo)
     iwindowRecord.pack()
 
 

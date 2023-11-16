@@ -98,9 +98,9 @@ def logPomodoroGui():
     with open('log.csv', 'a+') as log:
         #gathers data for log entry
         current_datetime = str(datetime.now())
-        num = input("What type of pomodoro? (1/2/3/4?)\n1:Misc\n2:Odin\n3:Extracurricular programming\n4:School Programming\n")
-        type = numToType(int(num))
-        description = input("What did you do during the pomodoro? ")
+        #get input from dropdown menu
+        #Get description from tk.entry
+
 
         #regular expression allows commas in notes
         pattern = ","
