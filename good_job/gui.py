@@ -2,13 +2,21 @@ import tkinter as tk
 import grapher as graphy
 import good_job
 
-
+def countDownLabel(timerLabel, counter=10): #counter should be 1500 for 25 min
+    startButton.config(state=tk.DISABLED)
+    if counter >= 0:
+        minutes, seconds = divmod(counter, 60)
+        converted = f"{minutes:02d}:{seconds:02d}"
+        timerLabel.config(text=converted)
+        root.after(1000, countDownLabel, timerLabel, counter-1)
+    elif counter < 0:
+        good_job.logPomodoroGui()
 def start():
     countDownLabel(timerLabel)
 
 def record():
     inputWindow()
-    good_job.logPomodoroGui()
+    #good_job.logPomodoroGui()
 
     ##import good_job track functions here
     return
@@ -19,21 +27,30 @@ def countplot():
 def histplot():
     graphy.histPlotLastThirty()
     return
-def countDownLabel(timerLabel, counter=10): #counter should be 1500 for 25 min
-    startButton.config(state=tk.DISABLED)
-    if counter >= 0:
-        minutes, seconds = divmod(counter, 60)
-        converted = f"{minutes:02d}:{seconds:02d}"
-        timerLabel.config(text=converted)
-        root.after(1000, countDownLabel, timerLabel, counter-1)
-    elif counter < 0:
-        good_job.logPomodoroGui()
+
 
 def inputWindow():
     iWindow = tk.Toplevel(root)
     iWindow.title("Input Window")
     iWindow.geometry("800x400")
     iWindow.resizable(False, False)
+
+    #Gets pomodoro type
+    selectedOption = tk.StringVar(root)
+    options = [" Japanese", " odin", " extracurricular programming"]
+    selectedOption.set(options[0])
+    type = tk.OptionMenu(iWindow, selectedOption, *options)
+    type.pack()
+
+
+    descriptionTitle = tk.Label(iWindow, text="What did you do during the pomdoro?")
+    descriptionTitle.pack()
+    description = tk.Entry(iWindow, width=20)
+    description.pack()
+
+    iwindowRecord = tk.Button(iWindow, text="Record")
+    iwindowRecord.pack()
+
 
 
 
