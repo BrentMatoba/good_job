@@ -28,6 +28,7 @@ def countDown():
 
 
 def numToType(number):
+    #legacy function
     #converts user input into pomodoro category
     if number == 1:
         return "misc"
@@ -50,6 +51,7 @@ def writeLog(log, datetime, type, description):
     log.write("\n")
 
 def goodJobSound():
+    #Legacy Function
     #plays congratulations sound
     good_job = pygame.mixer.Sound("ST_Fanfare_WinBattle.wav")
     good_job.play()
@@ -57,6 +59,7 @@ def goodJobSound():
 
 
 def printQuote():
+    #Legacy Function
     # Stores quotes
     quotes = [
         "The pain you feel today is the strength you feel tomorrow. For every challenge encountered there is an opportunity for growth",
@@ -93,7 +96,7 @@ def logPomodoro():
         #Adds new line to log.csv
         writeLog(log, current_datetime, type, description)
 
-def logPomodoroGui():
+def logPomodoroGui(type, description):
     #log management
     with open('log.csv', 'a+') as log:
         #gathers data for log entry

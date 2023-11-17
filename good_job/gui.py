@@ -2,7 +2,7 @@ import tkinter as tk
 import grapher as graphy
 import good_job
 
-def countDownLabel(timerLabel, counter=10): #counter should be 1500 for 25 min
+def countDownLabel(timerLabel, counter=1500): #counter should be 1500 for 25 min
     startButton.config(state=tk.DISABLED)
     if counter >= 0:
         minutes, seconds = divmod(counter, 60)
@@ -31,8 +31,13 @@ def histplot():
 def inputWindow():
     def returnInfo():
         # take pomodoro type from dropdown menu, and text from tk.entry, and add to record function
-        print(description.get())
-        pass
+        type = selectedOption.get()
+        desc = description.get()
+        good_job.logPomodoroGui(type, desc)
+
+        iWindow.destroy()
+
+
     #window boilerplate
     iWindow = tk.Toplevel(root)
     iWindow.title("Input Window")
@@ -41,7 +46,7 @@ def inputWindow():
 
     #Gets pomodoro type
     selectedOption = tk.StringVar(root)
-    options = [" Japanese", " odin", " extracurricular programming"]
+    options = ["Japanese", "odin", "extracurricular programming", "testing"]
     selectedOption.set(options[0])
     type = tk.OptionMenu(iWindow, selectedOption, *options)
     type.pack()

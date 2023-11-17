@@ -149,19 +149,9 @@ Date,Type,Description
 2023-10-05 17:32:38.385819, odin, Finish etch a sketch
 2023-10-06 20:53:53.341684, odin, Read object documentation
 2023-10-07 13:32:51.883698, extracurricular programming, Reading Python Documentation
-2023-10-07 14:02:06.493021, testing, testing this stillw orks lmfao
-2023-10-07 14:07:19.560028, testing, testing
-2023-10-07 14:18:27.305753, testing, testing
-2023-10-07 14:18:47.934315, testing, does this thing work
 2023-10-07 14:22:27.079114, testing, Showed this app to my mom!
 2023-10-07 17:31:42.716666, extracurricular programming, Add timer function to good_job
-2023-10-07 18:08:47.637589, testing, add main and pomodorotype
-2023-10-07 18:11:05.590707, testing, Edit some stuff
 2023-10-07 18:14:03.196402, extracurricular programming, Add main pomodoro type selector to good_job
-2023-10-08 14:24:15.812982, testing, testing countdown
-2023-10-08 14:27:22.623580, testing, testing
-2023-10-08 14:28:36.157117, testing, asdf
-2023-10-08 14:29:15.338155, testing, adfasdf
 2023-10-08 14:55:13.628638, extracurricular programming, Finish timer logging functionality for good_job; research matplotlib
 2023-10-08 15:59:41.447794, extracurricular programming, Resarch matplotlib; pandas; seaborn. Start grapher.py
 2023-10-08 16:54:58.990635, extracurricular programming, Add countplot functionality to grapher
@@ -184,7 +174,6 @@ Date,Type,Description
 2023-10-13 11:27:09.150960, odin, add display and button functionality to calculator
 2023-10-13 12:53:30.713437, odin, add operator button functionality to calculator
 2023-10-14 21:56:32.113162, odin, Add clear button functionality to calculator
-2023-10-15 23:17:22.468518, testing, testing; commas
 2023-10-16 12:23:11.487465, odin, pseudocode calculator
 2023-10-16 12:59:20.265660, odin, add regex to calculator to parse data
 2023-10-16 13:57:31.485544, odin, Add calculate short and length check functionality to calculator; improve on calculateLong
@@ -214,15 +203,12 @@ Date,Type,Description
 2023-10-25 19:53:26.202929, odin, Style CSS signup form
 2023-10-25 22:34:21.025294, odin, Continue styling signup form
 2023-10-26 22:05:51.953109, odin, Study grid
-2023-11-09 20:30:28.323468, testing, sasdf
-2023-11-09 20:30:41.894813, testing, asdkfl;
 2023-11-09 21:10:31.636171, extracurricular programming, add button functionality for histplot and countplots; fix import bug
 2023-11-10 14:31:37.462328, extracurricular programming, Add titles to graphs; add total pomodoros to countPlot figure
 2023-11-11 15:45:45.372005, extracurricular programming, Actually fixed placeholder grid issue
-2023-11-11 16:01:18.896161, testing, jlkasdf
 2023-11-11 16:23:34.500655, extracurricular programming, add timer to gui
-2023-11-12 19:47:13.951320, testing, test!
 2023-11-12 20:05:15.616943, extracurricular programming, Add start and record functionality to GUI
 2023-11-13 21:32:39.690564, extracurricular programming, pseudocode leveling system
 2023-11-14 20:59:42.937559, extracurricular programming, scanLog function and subject object syntax
 2023-11-15 21:17:19.225309, extracurricular programming, Add a inputwindow and buttons to the gui
+2023-11-16 22:24:41.605893, extracurricular programming, add csv functionality to my pomodoro tracker gui :)
