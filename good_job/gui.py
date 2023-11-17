@@ -27,11 +27,12 @@ def countplot():
 def histplot():
     graphy.histPlotLastThirty()
     return
-def returnInfo():
-    #take pomodoro type from dropdown menu, and text from tk.entry, and add to record function
-    pass
 
 def inputWindow():
+    def returnInfo():
+        # take pomodoro type from dropdown menu, and text from tk.entry, and add to record function
+        print(description.get())
+        pass
     #window boilerplate
     iWindow = tk.Toplevel(root)
     iWindow.title("Input Window")
