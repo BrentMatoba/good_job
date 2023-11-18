@@ -55,8 +55,8 @@ def histPlotLastWeek():
         oneWeekAgo = now - timedelta(weeks=1)
         for row in rows:
             date_string = row[0]
-            date_obj = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S:%f") #this formatting is right but I need to pad an extra micro second onto every piece of data I have looooo
-            print(date_obj)
+            modified_date_string = date_string.replace(".", ":")
+            date_obj = datetime.strptime(modified_date_string, "%Y-%m-%d %H:%M:%S:%f") #this formatting is right but I need to pad an extra micro second onto every piece of data I have looooo
 
 
 if __name__ == '__main__':
