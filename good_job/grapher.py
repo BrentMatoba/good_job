@@ -58,6 +58,11 @@ def histPlotLastWeek():
             modified_date_string = date_string.replace(".", ":")
             date_obj = datetime.strptime(modified_date_string, "%Y-%m-%d %H:%M:%S:%f") #this formatting is right but I need to pad an extra micro second onto every piece of data I have looooo
 
+            result = date_obj-oneWeekAgo
+            print(result)
+
+        #ok so I figured out how to access the data, but you need to figure out how to access only the days with positive time. Also result and oneWeekAgo are not the same object type and thats causign issues
+        #You got this! After we figure this part out the rest should be pretty easy.
 
 if __name__ == '__main__':
     #histPlotLastThirty()
