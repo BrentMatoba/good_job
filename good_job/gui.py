@@ -49,17 +49,17 @@ def inputWindow():
     options = ["Japanese", "odin", "extracurricular programming", "testing"]
     selectedOption.set(options[0])
     type = tk.OptionMenu(iWindow, selectedOption, *options)
-    type.pack()
+    type.place(x=350, y=50)
 
     #gets pomodoro description
     descriptionTitle = tk.Label(iWindow, text="What did you do during the pomdoro?")
     descriptionTitle.pack()
     description = tk.Entry(iWindow, width=20)
-    description.pack()
+    description.place(x=350, y=75)
 
     #creates record button
     iwindowRecord = tk.Button(iWindow, text="Record", command=returnInfo)
-    iwindowRecord.pack()
+    iwindowRecord.place(x=350, y=100)
 
 
 
