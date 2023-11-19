@@ -10,6 +10,18 @@ from datetime import datetime, timedelta
 log = pd.read_csv('log.csv')
 
 
+def chatCount():
+    # Step 2: Read the CSV file
+    df = pd.read_csv('log.csv', parse_dates=['Date'])
+
+    # Step 3: Calculate the date for one week ago
+    one_week_ago = datetime.now() - timedelta(days=7)
+
+    # Step 4: Filter the DataFrame
+    last_week_data = df[df['Date'] >= one_week_ago]
+
+    # Step 5: Access the filtered data
+    return last_week_data
 
 def countPlot():
     #Creates countplot of total pomodoros
@@ -46,6 +58,14 @@ def histPlotLastThirty():
     sns.histplot(x="Type", data=lastThirtyRows)
     plt.show()
 
+
+def chatPlotLastWeek():
+    window = plt.figure(figsize=(10, 8))
+    window.canvas.manager.set_window_title("Pomodoros over last week")
+    #sns.histplot(x="x", data=chatCount())
+    print(chatCount())
+
+
 def histPlotLastWeek():
     with open("log.csv", "r") as log:
         reader = csv.reader(log)
@@ -64,10 +84,12 @@ def histPlotLastWeek():
         #ok so I figured out how to access the data, but you need to figure out how to access only the days with positive time. Also result and oneWeekAgo are not the same object type and thats causign issues
             negativeCheck = "-"
             if negativeCheck not in result:
-                print(row[1])
+                print(row)
         #You got this! After we figure this part out the rest should be pretty easy.
+        #Its easy but thsi should have taken four lines and chatgpt figured itout......
 
 if __name__ == '__main__':
     #histPlotLastThirty()
     #countPlot()
     histPlotLastWeek()
+    #chatPlotLastWeek()
