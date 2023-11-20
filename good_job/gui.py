@@ -78,14 +78,19 @@ root.geometry("1200x800")
 root.resizable(False, False)
 
 #Buttons
-buttonFrame = tk.Frame(root)
-buttonFrame.place(x=100, y=50)
+#First Column
+buttonFrame1 = tk.Frame(root)
+buttonFrame1.place(x=100, y=50)
 
-startButton = tk.Button(buttonFrame, height=5, width=20,text="start pomodoro", command=start)
-trackButton = tk.Button(buttonFrame, height=5, width=20, text="record pomodoro", command=record)
-countplotButton = tk.Button(buttonFrame, height=5, width=20, text="countplot pomodoros", command=countplot)
-histplotButton = tk.Button(buttonFrame, height=5, width=20, text="histplot pomodoros", command=histplot)
-openLogButton = tk.Button(buttonFrame, height=5, width=20, text="Open Log", command=openLog)
+#Second Column
+buttonFrame2 = tk.Frame(root)
+buttonFrame2.place(x=350, y=50)
+
+startButton = tk.Button(buttonFrame1, height=5, width=20,text="start pomodoro", command=start)
+trackButton = tk.Button(buttonFrame1, height=5, width=20, text="record pomodoro", command=record)
+countplotButton = tk.Button(buttonFrame1, height=5, width=20, text="countplot pomodoros", command=countplot)
+histplotButton = tk.Button(buttonFrame1, height=5, width=20, text="histplot pomodoros", command=histplot)
+openLogButton = tk.Button(buttonFrame2, height=5, width=20, text="Open Log", command=openLog)
 
 #Timer Label
 timerLabel = tk.Label(root, text=("0:00"), font=("Arial", 80), bg="blue", width=10, height=4)
