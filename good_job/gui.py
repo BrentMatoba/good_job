@@ -1,6 +1,8 @@
 import tkinter as tk
 import grapher as graphy
 import good_job
+from subprocess import Popen
+
 
 def countDownLabel(timerLabel, counter=1500): #counter should be 1500 for 25 min
     startButton.config(state=tk.DISABLED)
@@ -11,6 +13,7 @@ def countDownLabel(timerLabel, counter=1500): #counter should be 1500 for 25 min
         root.after(1000, countDownLabel, timerLabel, counter-1)
     elif counter < 0:
         good_job.logPomodoroGui()
+
 def start():
     countDownLabel(timerLabel)
 
@@ -18,7 +21,6 @@ def record():
     inputWindow()
     #good_job.logPomodoroGui()
 
-    ##import good_job track functions here
     return
 def countplot():
     graphy.countPlot()
@@ -28,6 +30,11 @@ def histplot():
     graphy.histPlotLastThirty()
     return
 
+def openLog():
+    p = Popen("open log.csv", shell=True)
+
+
+
 def inputWindow():
     def returnInfo():
         # take pomodoro type from dropdown menu, and text from tk.entry, and add to record function
@@ -36,6 +43,7 @@ def inputWindow():
         good_job.logPomodoroGui(type, desc)
 
         iWindow.destroy()
+
 
 
     #window boilerplate
@@ -88,5 +96,7 @@ startButton.pack()
 trackButton.pack()
 countplotButton.pack()
 histplotButton.pack()
+
+openLog()
 
 root.mainloop()

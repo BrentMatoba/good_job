@@ -91,5 +91,10 @@ def histPlotLastWeek():
 if __name__ == '__main__':
     #histPlotLastThirty()
     #countPlot()
-    histPlotLastWeek()
+    #histPlotLastWeek()
     #chatPlotLastWeek()
+
+
+    with open("log.csv", "r") as log:
+        row = log[-1]
+        print(row)
