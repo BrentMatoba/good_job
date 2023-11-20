@@ -85,7 +85,7 @@ startButton = tk.Button(buttonFrame, height=5, width=20,text="start pomodoro", c
 trackButton = tk.Button(buttonFrame, height=5, width=20, text="record pomodoro", command=record)
 countplotButton = tk.Button(buttonFrame, height=5, width=20, text="countplot pomodoros", command=countplot)
 histplotButton = tk.Button(buttonFrame, height=5, width=20, text="histplot pomodoros", command=histplot)
-
+openLogButton = tk.Button(buttonFrame, height=5, width=20, text="Open Log", command=openLog)
 
 #Timer Label
 timerLabel = tk.Label(root, text=("0:00"), font=("Arial", 80), bg="blue", width=10, height=4)
@@ -96,7 +96,8 @@ startButton.pack()
 trackButton.pack()
 countplotButton.pack()
 histplotButton.pack()
+openLogButton.pack()
 
-openLog()
+
 
 root.mainloop()
