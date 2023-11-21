@@ -97,6 +97,8 @@ def logPomodoro():
         writeLog(log, current_datetime, type, description)
 
 def logPomodoroGui(type, description):
+    pygame.init()
+    pygame.mixer.init()
     #log management
     with open('log.csv', 'a+') as log:
         #gathers data for log entry
@@ -113,6 +115,7 @@ def logPomodoroGui(type, description):
         #Adds new line to log.csv
         writeLog(log, current_datetime, type, description)
 
+    goodJobSound()
 
 
 
