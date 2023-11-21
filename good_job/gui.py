@@ -76,6 +76,8 @@ root = tk.Tk()
 root.title("Pomodoro Tracker")
 root.geometry("1200x800")
 root.resizable(False, False)
+root.configure(background="#FAD4C0")
+#Colors: B09E99 CINEREOUS, FEE9E1 MISTY ROSE, FAD4C0 APRICOT, 64B6AC VERDIGRIS, C0FDFB CELESTE
 
 #Buttons
 #First Column
@@ -93,8 +95,10 @@ histplotButton = tk.Button(buttonFrame1, height=5, width=20, text="histplot pomo
 openLogButton = tk.Button(buttonFrame2, height=5, width=20, text="Open Log", command=openLog)
 
 #Timer Label
-timerLabel = tk.Label(root, text=("0:00"), font=("Arial", 80), bg="blue", width=10, height=4)
+timerLabel = tk.Label(root, text=("0:00"), font=("Arial", 80), bg="#B09E99", width=10, height=4)
 timerLabel.place(x=600, y=50)
+
+
 
 
 startButton.pack()
