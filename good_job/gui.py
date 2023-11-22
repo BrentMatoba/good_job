@@ -33,6 +33,19 @@ def histplot():
 def openLog():
     p = Popen("open log.csv", shell=True)
 
+def lastweekList():
+    lastweekWindow = tk.Toplevel(root)
+    lastweekWindow.title("Pomodoros From last week")
+    lastweekWindow.geometry("800x400")
+    lastweekWindow.resizable(False, False)
+
+
+    list = graphy.lastweekList()
+    counter = 0
+    for row in list:
+        print(row)
+        item = tk.Label(lastweekWindow, text=row)
+        item.pack()
 
 
 def inputWindow():
@@ -93,6 +106,7 @@ trackButton = tk.Button(buttonFrame1, height=5, width=20, text="record pomodoro"
 countplotButton = tk.Button(buttonFrame1, height=5, width=20, text="countplot pomodoros", command=countplot)
 histplotButton = tk.Button(buttonFrame1, height=5, width=20, text="histplot pomodoros", command=histplot)
 openLogButton = tk.Button(buttonFrame2, height=5, width=20, text="Open Log", command=openLog)
+lastweekButton = tk.Button(buttonFrame2, height=5, width=20, text="Last Week", command=lastweekList)
 
 #Timer Label
 timerLabel = tk.Label(root, text=("0:00"), font=("Arial", 80), bg="#B09E99", width=10, height=4)
@@ -106,6 +120,7 @@ trackButton.pack()
 countplotButton.pack()
 histplotButton.pack()
 openLogButton.pack()
+lastweekButton.pack()
 
 
 
