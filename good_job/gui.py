@@ -57,10 +57,9 @@ def inputWindow():
 
         iWindow.destroy()
 
-
-
+    # Colors: B09E99 CINEREOUS, FEE9E1 MISTY ROSE, FAD4C0 APRICOT, 64B6AC VERDIGRIS, C0FDFB CELESTE
     #window boilerplate
-    iWindow = tk.Toplevel(root)
+    iWindow = tk.Toplevel(root, bg="#FEE9E1")
     iWindow.title("Input Window")
     iWindow.geometry("800x400")
     iWindow.resizable(False, False)
