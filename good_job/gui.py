@@ -34,6 +34,7 @@ def openLog():
     p = Popen("open log.csv", shell=True)
 
 def lastweekList():
+    #Creates Window
     lastweekWindow = tk.Toplevel(root)
     lastweekWindow.title("Pomodoros From last week")
     lastweekWindow.geometry("800x400")
@@ -41,9 +42,7 @@ def lastweekList():
 
 
     list = graphy.lastweekList()
-    counter = 0
     for row in list:
-        print(row)
         item = tk.Label(lastweekWindow, text=row)
         item.pack()
 
@@ -113,7 +112,7 @@ timerLabel.place(x=600, y=50)
 
 
 
-
+#Apply Buttons to main window
 startButton.pack()
 trackButton.pack()
 countplotButton.pack()
