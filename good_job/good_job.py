@@ -115,7 +115,6 @@ def logPomodoroGui(type, description):
         #Adds new line to log.csv
         writeLog(log, current_datetime, type, description)
 
-    goodJobSound()
 
 
 
