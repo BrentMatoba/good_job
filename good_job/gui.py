@@ -71,13 +71,13 @@ def inputWindow():
     type.place(x=350, y=50)
 
     #gets pomodoro description
-    descriptionTitle = tk.Label(iWindow, text="What did you do during the pomdoro?")
+    descriptionTitle = tk.Label(iWindow, text="What did you do during the pomdoro?", bg="#FEE9E1")
     descriptionTitle.pack()
     description = tk.Entry(iWindow, width=20)
     description.place(x=350, y=75)
 
     #creates record button
-    iwindowRecord = tk.Button(iWindow, text="Record", command=returnInfo)
+    iwindowRecord = tk.Button(iWindow, text="Record", command=returnInfo, background="#FEE9E1")
     iwindowRecord.place(x=350, y=100)
 
 
