@@ -23,7 +23,13 @@ class Subject:
         self.pomodoros = 0;
         self.level = 1
 
-
+def rankFinder():
+    #find number of pomodoros,
+    None
+    #Feed them into level equation
+    #Per x amount of levels, increase rank by one,
+    #Assign badges to ranks
+    #make display for gui
 def scanLog(subject):
     counter = 0;
     with open("log.csv", "r") as log:
