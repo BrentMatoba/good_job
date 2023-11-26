@@ -110,9 +110,11 @@ lastweekButton = tk.Button(buttonFrame2, height=5, width=20, text="Last Week", c
 timerLabel = tk.Label(root, text=("0:00"), font=("Arial", 80), bg="#B09E99", width=10, height=4)
 timerLabel.place(x=600, y=50)
 
-#Badges
-badgeLabel = tk.Label(root, text="Ranks", font=("Arial", 80), bg="white", width=10, height=3)
-badgeLabel.place(x=600, y=450)
+#Ranks
+rankFrame = tk.Frame(root)
+rankFrame.place(x=600, y=450)
+badgeLabel = tk.Label(rankFrame, text="Ranks", font=("Arial", 80), fg="black", bg="white", width=10, height=3)
+badgeLabel.pack()
 
 
 #Apply Buttons to main window
