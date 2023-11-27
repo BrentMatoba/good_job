@@ -2,7 +2,7 @@ import tkinter as tk
 import grapher as graphy
 import good_job
 from subprocess import Popen
-
+from PIL import Image, ImageTk
 
 def countDownLabel(timerLabel, counter=1500): #counter should be 1500 for 25 min
     startButton.config(state=tk.DISABLED)
@@ -113,8 +113,13 @@ timerLabel.place(x=600, y=50)
 #Ranks
 rankFrame = tk.Frame(root)
 rankFrame.place(x=600, y=450)
-badgeLabel = tk.Label(rankFrame, text="Ranks", font=("Arial", 80), fg="black", bg="white", width=10, height=3)
-badgeLabel.pack()
+badgeText = tk.Label(rankFrame, text="Ranks", font=("Arial", 80), fg="black", bg="white", width=10, height=3)
+badgeText.pack()
+
+badgeIMG = Image.open("assets/Badges/Rank emblems1.png")
+cleanedIMG = ImageTk.PhotoImage(badgeIMG)
+badge = tk.Label(rankFrame, image=cleanedIMG)
+badge.pack()
 
 
 #Apply Buttons to main window
