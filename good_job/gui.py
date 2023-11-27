@@ -113,12 +113,13 @@ timerLabel.place(x=600, y=50)
 #Ranks
 rankFrame = tk.Frame(root)
 rankFrame.place(x=600, y=450)
+rankFrame.configure(bg="white")
 badgeText = tk.Label(rankFrame, text="Ranks", font=("Arial", 80), fg="black", bg="white", width=10, height=3)
 badgeText.pack()
 
 badgeIMG = Image.open("assets/Badges/Rank emblems1.png")
 cleanedIMG = ImageTk.PhotoImage(badgeIMG)
-badge = tk.Label(rankFrame, image=cleanedIMG)
+badge = tk.Label(rankFrame, image=cleanedIMG, bg="white")
 badge.pack()
 
 
