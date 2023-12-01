@@ -12,7 +12,8 @@ def countDownLabel(timerLabel, counter=1500): #counter should be 1500 for 25 min
         timerLabel.config(text=converted)
         root.after(1000, countDownLabel, timerLabel, counter-1)
     elif counter < 0:
-        good_job.logPomodoroGui()
+        good_job.goodJobSound()
+        inputWindow()
 
 def start():
     countDownLabel(timerLabel)

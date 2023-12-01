@@ -51,8 +51,9 @@ def writeLog(log, datetime, type, description):
     log.write("\n")
 
 def goodJobSound():
-    #Legacy Function
     #plays congratulations sound
+    pygame.init()
+    pygame.mixer.init()
     good_job = pygame.mixer.Sound("ST_Fanfare_WinBattle.wav")
     good_job.play()
     pygame.time.wait(int(good_job.get_length() * 1000))

@@ -217,3 +217,14 @@ Date,Type,Description
 2023-11-18 22:11:33.905715, extracurricular programming, work on last week histplot functionality
 2023-11-19 22:10:57.477865, extracurricular programming, add function for openign csv from python directly
 2023-11-21 21:14:00.449280, extracurricular programming, figure out how to display last week's pomodoros
+2023-11-27 17:06:57.485048, testing, 
+2023-11-27 17:07:06.871271, testing, luna is a big baby
+2023-11-28 23:19:29.896228, extracurricular programming, make a chessboard
+2023-11-28 23:37:56.277330, extracurricular programming, wrote square object for chessboard
+2023-11-28 23:53:03.051218, extracurricular programming, made grid system for chessboard
+2023-11-29 09:42:01.735523, extracurricular programming, research javascript modules
+2023-11-29 10:18:40.489440, extracurricular programming, figure out how to display pieces
+2023-11-30 16:42:03.532686, odin, add norse font and signup form labels
+2023-11-30 17:22:54.944485, odin, fix forms; get labels above input fields
+2023-11-30 17:39:53.114363, odin, get labels/input pairs horizontally place while maintaing vertical relationship of label/input
+2023-12-01 15:22:35.848682, odin, style input fields on sign up form
