@@ -4,7 +4,7 @@ import good_job
 from subprocess import Popen
 from PIL import Image, ImageTk
 
-def countDownLabel(timerLabel, counter=1500): #counter should be 1500 for 25 min
+def countDownLabel(timerLabel, counter=15000): #counter should be 1500 for 25 min
     startButton.config(state=tk.DISABLED)
     if counter >= 0:
         minutes, seconds = divmod(counter, 60)
@@ -12,9 +12,11 @@ def countDownLabel(timerLabel, counter=1500): #counter should be 1500 for 25 min
         timerLabel.config(text=converted)
         root.after(1000, countDownLabel, timerLabel, counter-1)
     elif counter < 0:
+        enableStart(startButton)
         good_job.goodJobSound()
         inputWindow()
-
+def enableStart(startButton):
+    startButton.config(state="normal")
 def start():
     countDownLabel(timerLabel)
 
@@ -66,7 +68,7 @@ def inputWindow():
 
     #Gets pomodoro type
     selectedOption = tk.StringVar(root)
-    options = ["Japanese", "odin", "extracurricular programming", "testing"]
+    options = ["odin", "Japaneseß", "extracurricular programming", "testing"]
     selectedOption.set(options[0])
     type = tk.OptionMenu(iWindow, selectedOption, *options)
     type.place(x=350, y=50)
