@@ -228,3 +228,4 @@ Date,Type,Description
 2023-11-30 17:22:54.944485, odin, fix forms; get labels above input fields
 2023-11-30 17:39:53.114363, odin, get labels/input pairs horizontally place while maintaing vertical relationship of label/input
 2023-12-01 15:22:35.848682, odin, style input fields on sign up form
+2023-12-02 19:21:08.918919, extracurricular programming, add function to pomodoro tracker to reenable start button after timer ends
