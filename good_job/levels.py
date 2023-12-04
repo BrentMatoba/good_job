@@ -15,7 +15,7 @@ import math
         #N2: 3080 XP (1980 from N3 + 1100 additional)
         #N1: 4400 XP (3080 from N2 + 1320 additional)
 
-#XP=a⋅b level
+#XP=a⋅b^level
 #This is the leveling using an exponential function
 #N5(Level1): ~869.14XP
 #N4(Level2): ~1303.70XP
@@ -31,15 +31,18 @@ class Subject:
         self.name = name
         self.pomodoros = 0;
         self.level = 1
-def calculateLevelXP(pomodoros):
+def calculateLevelXPLog(pomodoros):
     #This is terrible, rewrite to be an exponential function listed above.
     return math.log(pomodoros, 1.4) + 1
+
+def calculateLevelXPExponential(pomodoros):
+    return 579.42*1.5^pomodoros
 def rankFinder(subject):
     #find number of pomodoros,
     pomodoros = scanLog(subject)
     None
     #Feed them into level equation
-    return calculateLevelXP(pomodoros)
+    return calculateLevelXPExponential(pomodoros)
     #Per x amount of levels, increase rank by one,
     #Assign badges to ranks
     #make display for gui
