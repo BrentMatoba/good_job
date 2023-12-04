@@ -121,7 +121,8 @@ badgeText = tk.Label(rankFrame, text="Ranks", font=("Arial", 80), fg="black", bg
 badgeText.pack()
 
 badgeIMG = Image.open("assets/Badges/Rank emblems1.png")
-cleanedIMG = ImageTk.PhotoImage(badgeIMG)
+resizedIMG = badgeIMG.resize((100, 100))
+cleanedIMG = ImageTk.PhotoImage(resizedIMG)
 badge = tk.Label(rankFrame, image=cleanedIMG, bg="white")
 badge.pack()
 

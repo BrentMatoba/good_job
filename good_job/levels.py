@@ -23,6 +23,12 @@ import math
 #N2(Level4): ~2933.33XP
 #N1(Level5): 4400XP
 
+
+
+#N5 sublevels:
+#
+
+
 class Subject:
     name = None
     pomodoros =None;
